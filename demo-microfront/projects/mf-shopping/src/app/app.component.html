@@ -1,0 +1,22 @@
+<main class="main">
+  <div class="content">
+    <div class="left-side">
+      <h1>{{ title }}</h1>
+      <p>Congratulations! Your app is running. 🎉</p>
+
+      <h2>Datos del Backend:</h2>
+      <pre>{{ backendData | json }}</pre>
+
+      <!-- Botón para actualizar datos -->
+      <button (click)="refreshData()">Actualizar Datos</button>
+
+      <!-- Botón para enviar datos al backend -->
+      <button (click)="sendData()">Enviar Datos</button>
+
+      <!-- Mostrar un mensaje si los datos fueron enviados -->
+      <p *ngIf="responseMessage">{{ responseMessage }}</p>
+    </div>
+  </div>
+</main>
+
+
